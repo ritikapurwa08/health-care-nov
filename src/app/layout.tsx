@@ -23,22 +23,22 @@ export default function RootLayout({
 }>) {
   return (
     <ConvexAuthNextjsServerProvider>
-      <html lang="en">
-        <body
-          className={cn(
-            "antialiased   ",
-            inter.className,
-            roboto.className,
-            openSans.className
-          )}
-        >
-          <ConvexClientProvider>
+      <ConvexClientProvider>
+        <html lang="en">
+          <body
+            className={cn(
+              "antialiased   ",
+              inter.className,
+              roboto.className,
+              openSans.className
+            )}
+          >
             <main className="max-w-7xl mx-auto px-6">{children}</main>
 
             <Toaster />
-          </ConvexClientProvider>
-        </body>
-      </html>
+          </body>
+        </html>
+      </ConvexClientProvider>
     </ConvexAuthNextjsServerProvider>
   );
 }
