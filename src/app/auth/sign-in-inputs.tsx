@@ -88,14 +88,7 @@ export default function SignInInputs() {
           </Alert>
         )}
 
-        <Button
-          size="default"
-          className="w-full"
-          type="submit"
-          disabled={pending}
-        >
-          <SubmitButton isLoading={pending}>GetStatre</SubmitButton>
-        </Button>
+        <SubmitButton isLoading={pending}>get started</SubmitButton>
       </form>
     </Form>
   );

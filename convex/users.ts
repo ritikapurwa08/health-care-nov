@@ -13,6 +13,9 @@ export const getCurrentUser = query({
 
     // Fetch user data from your users table
     const user = await ctx.db.get(userId);
+    if (!user) {
+      return null;
+    }
 
     return user;
   },

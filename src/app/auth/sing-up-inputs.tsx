@@ -11,9 +11,9 @@ import { useRouter } from "next/navigation";
 import { AuthSignUpSchema, AuthSignUpSchemaType } from "@/app/auth/auth.types";
 
 import { toast } from "sonner";
+import SubmitButton from "@/features/form-provider/submit-button";
 import CustomInput from "@/features/form-provider/custom-input";
 import CustomPasswordInput from "@/features/form-provider/custom-password-input";
-import SubmitButton from "@/features/form-provider/submit-button";
 
 const SignUpInputs = () => {
   const { signIn } = useAuthActions();
@@ -103,9 +103,7 @@ const SignUpInputs = () => {
           </div>
         )}
 
-        <Button type="submit" className="w-full my-4" disabled={pending}>
-          <SubmitButton isLoading={pending}>Sign Up</SubmitButton>
-        </Button>
+        <SubmitButton isLoading={pending}>get started</SubmitButton>
       </form>
     </Form>
   );
